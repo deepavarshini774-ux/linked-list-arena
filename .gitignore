@@ -1,0 +1,15 @@
+# Build output
+LinkedListArena
+LinkedListArena.exe
+*.exe
+*.o
+*.obj
+*.a
+*.lib
+build/
+
+# Editor / OS
+.vs/
+*.user
+.DS_Store
+Thumbs.db

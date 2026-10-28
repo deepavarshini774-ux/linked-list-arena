@@ -1,0 +1,32 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "Build LINKED LIST ARENA",
+            "type": "shell",
+            "command": "g++",
+            "args": [
+                "-std=c++17",
+                "-O2",
+                "-Wall",
+                "${workspaceFolder}/src/*.cpp",
+                "-o",
+                "${workspaceFolder}/LinkedListArena.exe",
+                "-I", "C:/raylib/raylib-5.5_win64_mingw-w64/include",
+                "-L", "C:/raylib/raylib-5.5_win64_mingw-w64/lib",
+                "-lraylib", "-lopengl32", "-lgdi32", "-lwinmm"
+            ],
+            "group": { "kind": "build", "isDefault": true },
+            "problemMatcher": ["$gcc"],
+            "presentation": { "reveal": "always", "panel": "shared" }
+        },
+        {
+            "label": "Build and Run",
+            "type": "shell",
+            "command": "${workspaceFolder}/LinkedListArena.exe",
+            "dependsOn": "Build LINKED LIST ARENA",
+            "group": "test",
+            "presentation": { "reveal": "always", "panel": "shared" }
+        }
+    ]
+}
